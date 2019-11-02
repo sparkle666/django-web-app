@@ -1,0 +1,32 @@
+{%  extends 'main/header.html' %}
+
+{% block content %}
+	<div class="w3-row-padding w3-container">
+		
+			<div class="w3-col w3-half w3-card w3-white w3-container w3-margin-bottom">
+			
+				<h3 class="w3-border-bottom"><a href="{% url 'showcase:show_home' %}" style="list-style-type: none" > My Portfolio Web App </a></h3>
+				<p> This a little webapp to showcase my graphics portfolio </p>
+			<h4 class="w3-border-bottom w3-padding-bottom">Frameworks Used </h4>
+			<p> <span class="w3-tag w3-teal"> W3Css </span> <span class="w3-tag w3-teal"> Django </span> </p>
+			<p> <h5> Dependencies: </h5> <span class="w3-teal w3-tag"> Tiny Mce </span> <span class="w3-teal w3-tag"> Pillow </span></p>
+			<div class="w3-panel">
+				<a href="{% url 'showcase:show_home' %}" class="w3-block w3-padding w3-teal w3-center w3-round w3-ripple" >Visit </a> 
+			</div>
+			</div>
+			<div class="w3-col w3-half w3-white w3-card w3-container w3-margin-bottom">
+				<h3 class="w3-border-bottom"> 
+				<a href="{% url 'blogapp:blog_home' %}" style="list-style-type: none" >Blog App 
+				</a>
+				</h3>
+				<p>This is a sample blog web app.</p>
+				<h4 class="w3-border-bottom w3-padding-bottom">Frameworks Used </h4>
+				<p> <span class="w3-tag w3-teal"> Bootstrap </span> <span class="w3-tag w3-teal"> Django </span> </p>
+				<p> <h5> Dependencies: </h5> <span class="w3-teal w3-tag"> Crispy Forms </span> </p>
+				<div class="w3-panel">
+					<a href="{% url 'blogapp:blog_home' %}" class="w3-block w3-padding w3-teal w3-round w3-ripple w3-center" >Visit </a> 
+				</div>
+			</div>
+	</div>
+{%  endblock %}
+	

@@ -1,0 +1,12 @@
+
+{% if messages %}
+<br>
+{% for message in messages %}
+	<div class="w3-panel w3-round-xlarge w3-pale-green" id ="panel">
+		<span class="fa fa-close w3-text-white w3-display-topright w3-button" onclick="w3.hide('#panel')"></span>
+		<h3> Success!! </h3>
+		<p> {{ message }} </p>
+	</div>
+{% endfor %}
+<br>
+{% endif %}

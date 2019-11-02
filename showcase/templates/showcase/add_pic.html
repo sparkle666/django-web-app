@@ -1,0 +1,28 @@
+{% extends 'showcase/base1.html' %}
+{% block content %}
+	<br>
+	<div class="w3-row">
+	<!-- row start -->
+	<div class="w3-col s12 l4">
+	</div>
+	
+	<div class="w3-col s12 l4 w3-container w3-padding">
+	<div class="w3-card w3-white w3-container">
+	<br>
+	<form method="post" enctype="multipart/form-data">
+	<legend> Add a design </legend>
+		{% csrf_token %}
+		{{ form.media }}
+		{{ form.as_p }}
+		<button class="w3-button w3-teal" type="submit"> Add </button>
+	</form>
+	<br>
+	</div>
+	</div>
+	
+	<div class="w3-col s12 l4">
+	</div>	
+	
+	<!-- row end -->
+	</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "showcase/base.html' %}
+
+{% block content %}
+	<form method="post">
+		{% csrf_token %}
+		{% form.as_p %}
+		<button class="w3-button">Login</button>
+	</form>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/w34.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Lora", sans-serif}
+a { text-decoration: none;}
+</style>
+<script type="text/javascript" src="{% static 'js/w3.js' %}"></script>
+</head>
+<body class="w3-light-grey">
+	{% include 'showcase/nav.html' %}
+	<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+	<div class="w3-container w3-light-grey">
+	{% include 'showcase/message.html' %}
+	{% block content %}
+	{% endblock %}
+	</div> 
+	<br>
+	<!-- Footer -->
+
+	
+	<!-- End page content -->
+	</div>
+	
+	<footer class="w3-container w3-padding-16 w3-white">
+	<h4>FOOTER</h4>
+	<p>Powered by <a href="#" target="_blank">w3.css</a></p>
+	</footer>
+</body>
+</html>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
